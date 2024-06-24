@@ -1,6 +1,6 @@
 # Simple Online Book Store
 
-Basic web application built using HTML, CSS, and JavaScript. The application allows users to browse books, add reviews for products and place orders.
+Basic Web Application built using HTML, CSS and JavaScript. The application allows users to browse books, add reviews for products and place orders.
 
 ## Features
 
