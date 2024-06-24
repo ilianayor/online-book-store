@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Merriweather", "Roboto Condensed";
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    background-color: #F5FBF5; 
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu a {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #106838;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 22px;
+    color: black;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.3);
+    color: #106838;
+}
+
+#menu-icon {
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+}
+
+section {
+    padding: 5% 10%;
+}
+
+.header {
+    background-image: url(images/web-banner.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+
+}
+
+.main-button{
+    background-color: #106838;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+
+.titles h1 {
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.titles h4 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.center-text h2 {
+    color: #106838;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1em;
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 3rem;
+}
+
+
+.row {
+    position: relative;
+    padding: 10px 12px;
+    cursor: pointer;
+
+}
+
+.row h4 {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.row p {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    color: #707070;
+
+}
+
+.price {
+    margin-top: 1em;
+    color: #106838;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all .42s;
+    margin-bottom: 1em;
+}
+
+.row img:hover {
+    transform: scale(0.9);
+}
+
+.row .star {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 15px;
+    color: rgb(243, 181, 25);
+}
+
+.footer {
+    background-color: #f3f4f6;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+}
+
+.information img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 4em;
+    margin-top: 2em;
+}
+
+.footer-info h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #106838;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+}
+
+.footer-info p {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.newsletter #labels {
+    font-size: 16px;
+}
+
+.newsletter input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.newsletter button {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 1em;
+
+}
+
+.footer-info p:hover {
+    color: #106838;
+}
+
+.social-media {
+    color: #707070;
+    font-size: 25px;
+    transition: all .42s;
+}
+
+.social-media i:hover {
+    color: #106838;
+    transform: scale(1.2);
+}
+
+#copyright-text{
+    text-align: center;
+    padding: 20px;
+    background-color: #F5FBF5;
+}
+
+.image img {
+    width: 300px;
+    height: auto;
+    margin-right: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin-top: 70px;
+}
+
+
+.product-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+.product-details .single-product {
+    width: 70%;
+}
+
+.product-details .single-product h6 {
+    padding: 50px 0 20px 0;
+}
+
+.product-details .single-product h2 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.product-details .single-product h4 {
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 10px;
+    color: #106838;
+}
+
+.product-details .single-product h5 {
+    font-style: italic;
+    font-size: 15px;
+    color: #707070;
+}
+
+
+.product-details #price {
+    margin-top: 1em;
+    color: #106838;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.product-details label {
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.product-details input {
+    width: 52px;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.product-details button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    line-height: 25px;
+}
+
+.form-review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 65%;
+    margin-left: 10%;
+}
+
+.form-buy{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 65%;
+}
+
+.form-review,
+.form-buy {
+    display: none; 
+}
+
+.form-review input, textarea,
+.form-buy input{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 1em;
+    border: 1px solid #707070;
+}
+
+
+.form-buy button{
+    background-color: #106838;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.form-review button{
+    background-color: #106838;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.add-review-button {
+    background-color: #106838;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-bottom: 1em;
+}
+
+#add-review-question{
+    margin-left: 10%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.single-article img{
+    width: 380px;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, auto));
+    gap: 1rem;
+}
+
+.articles h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.articles h5{
+    color: #707070;
+    font-size: 13px;
+}
+
+.articles h6{
+    color: #106838;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+/* Responsiveness */
+
+@media(max-width: 890px){
+    header{
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+
+@media(max-width: 630px){
+   .titles h1 {
+    font-size: 50px;
+    transition: .4s;
+   }
+}
+
+.success-message {
+    display: none;
+    color: green;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.successMessageNewsLetter{
+    display: none;
+    color: green;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.review-left {
+    flex: 1;
+    text-align: left;
+}
+
+.review-right {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.review-left span{
+    color:#707070;
+    font-size: 15px;
+}
+
+.review-left h4 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.review-right .stars {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 15px;
+    color: rgb(243, 181, 25);
+}
+
+.form-review select {
+    padding: 15px;
+    width: 60px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+

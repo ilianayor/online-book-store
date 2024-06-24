@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Defines the compatibility of version with browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- responsiveness -->
+    <meta name="description " content="Гръцко синьо" />
+    <title>Гръцко синьо</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Онлайн книжарница Bookland"
+                title="Онлайн книжарница Bookland"></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="#">Книги</a></li>
+            <li><a href="#">Учебници</a></li>
+            <li><a href="#">Подаръци</a></li>
+            <li><a href="#">Планери</a></li>
+        </ul>
+        <div class="nav-icon">
+            <a href="#"><i class='bx bxs-search'></i></a>
+            <a href="#"><i class='bx bxs-user'></i></a>
+            <a href="#"><i class='bx bxs-cart'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <section class="product-details">
+        <div class="image">
+            <img src="images/gratsko-sinyo.jpg" alt="Гръцко синьо" title="Гръцко синьо">
+        </div>
+        <div class="single-product">
+            <h6>Онлайн книжарница Bookland / Книги / Българска литература / Гръцко синьо</h6>
+            <h2>Гръцко синьо</h2>
+            <h5>Издател: Сиела</h5>
+            <h5>Автор: Анита Димитрова</h5>
+            <p id="price">30,00 лв.</p>
+            <label for="quantity">Количество: </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+            <button id="buyButton" onclick="showBuyForm()">КУПИ</button>
+            <div class="form-buy" id="buyForm">
+                <form action="" id="form" method="get">
+                    <input type="text" id="name" name="name" placeholder="Име и фамилия" required>
+                    <input type="email" id="email" name="email" placeholder="Имейл адрес" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефонен номер"
+                        pattern="\+359 8[1-9]{2}[0-9]{6}" required>
+                    <input type="text" id="address" name="address" placeholder="Адрес" required>
+                    <input type="text" id="city" name="city" placeholder="Град" required>
+                    <button type="submit" class="form-button" onclick="successMessage()">Изпращане</button>
+                </form>
+            </div>
+            <div class="success-message" id="successMessage"></div>
+            <h4>Описание</h4>
+                <p>• Кой е най-хубавият плаж в Гърция?</p>
+                <p>• Къде е подходящо за почивка с деца?</p>
+                <p>• Кой остров посреща гостите си най-сърдечно?</p>
+                <p>• &bdquo;Гръцко синьо&ldquo; дава отговор на тези и много други въпроси.</p>
+            <br>
+            <p>Четиридесет близки и далечни дестинации - от Тасос и Халкидики до непознатите южни острови; полезни
+                съвети за плаването на море, местната кухня, историческите забележителности... Но в този
+                &bdquo;Пътеводител в близкото и непознатото&ldquo; ще откриете не само златни плажове, фотогенични
+                залези и практична информация за туриста. В него има и вендети, тюлени, политически убийства, вулкани и
+                земетресения, любовна история, пирати, корабокрушения; чуват се стъпките на Омир и Казандзакис, Джералд
+                Даръл и Ленард Коен.</p>
+            <br>
+            <p>&bdquo;Гръцко синьо&ldquo; може да бъде четена като наръчник, когато се отправяте към южната ни съседка;
+                но и като приказка, която ще ви отведе в Гърция винаги, когато имате нужда поне от емоционална почивка,
+                от песента на цикадите и полъха на морския бриз.</p>
+
+    </section>
+
+    <h4 id="add-review-question">Имаш мнение за този продукт?</h4><button class="add-review-button"
+        onclick="showFormReview()">Добави ревю</button>
+
+    <div class="form-review" id="formReview">
+        <form action="" method="post">
+            <span id="form-span">Остави коментар</span></br>
+            <input type="text" id="review-name" name="name" placeholder="Име" required>
+            <input type="text" id="title" name="title" placeholder="Заглавие" required>
+            <textarea id="review" name="review" rows="4" placeholder="Коментар" required></textarea>
+            <label for="review-rating">Оценка: </label>
+            <select id="review-rating" name="review-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <button id='add-review' class="form-button" type="button" onclick="addReview()">Добави коментар</button>
+        </form>
+    </div>
+    <!--Client Reviews-->
+    <section class="client-reviews" id="c-reviews-id">
+        <h2 id="center-text">Ревюта</h2>
+        <div class="reviews" id="reviews">
+            <div class="review-left">
+                <h4>Лора Петрова</h4>
+                <span>20/06/2024</span>
+            </div>
+            <div class="review-right">
+                <h3>Гръцко синьо</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Страхотен пътеводител за Гърция.</p>
+            </div>
+        </div>
+        <div class="reviews">
+            <div class="review-left">
+                <h4>Петър Петков</h4>
+                <span>10/06/2024</span>
+            </div>
+            <div class="review-right">
+                <h3>Страхотно</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Със сигурност ще ми е от полза.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-info">
+            <div class="information">
+                <h3>Контакти</h3>
+                <p>Книжарница Bookland</p>
+                <p>гр. София, България</p>
+                <p>contact@bookland.bg</p>
+                <img src="images/logo.png" alt="Онлайн книжарница Bookland" title="Онлайн книжарница Bookland">
+                <div class="social-media">
+                    <i class='bx bxl-facebook-square'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-youtube'></i>
+
+                </div>
+            </div>
+            <div class="static-pages">
+                <h3>Компания</h3>
+                <a href="#">
+                    <p>За нас</p>
+                </a>
+                <a href="#">
+                    <p>Блог</p>
+                </a>
+                <h3>За клиенти</h3>
+                <a href="#">
+                    <p>Условия за ползване</p>
+                </a>
+                <a href="#">
+                    <p>Политика на поверителност</p>
+                </a>
+            </div>
+            <div class="newsletter">
+                <h3>Бюлетин</h3>
+                <form action="#" method="post" id="newsletter-form">
+                    <label id="labels" for="email">Имейл адрес:</label></br>
+                    <input type="email" id="newsletter-email" name="email" required></br>
+                    <label id="labels" for="email">Име:</label></br>
+                    <input type="name" id="newsletter-name" name="name" required></br>
+                    <button type="button" onclick="messageNewsletter()">Записване</button>
+                </form>
+                <div class="successMessageNewsLetter" id="successMessageNewsLetter"></div>
+            </div>
+        </div>
+
+    </section>
+    <div id="copyright-text">
+        <p>© 2024 Онлайн книжарница Bookland - всички права запазени</p>
+    </div>
+</body>
